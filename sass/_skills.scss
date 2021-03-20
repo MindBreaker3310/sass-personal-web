@@ -1,0 +1,49 @@
+.skills{
+    background-image: linear-gradient(to bottom right, rgba(33, 150, 243, 0.7), rgba(0, 0, 0, 0.7)),url(../img/ball.jpg);
+    background-size: cover;
+    background-position: 50% 60%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    &__container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 9rem;
+
+        padding: 5rem 0 10rem 0;
+    }
+
+    &__item{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__img{
+        height: 15rem;
+        width: 15rem;
+        filter: invert(1);
+    }
+
+    &__content{
+        font-size: 3rem;
+        color: white;
+    }
+
+    &__title{
+        margin: 0 auto;
+        font-size: 3rem;
+        padding-top: 8rem;
+        letter-spacing: 4px;
+        text-align: center;
+    }
+    
+    @include respond(tab-port){
+        &__container{
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 0;        
+        }
+    }
+    
+}

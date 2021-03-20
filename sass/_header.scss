@@ -1,0 +1,71 @@
+.header{
+    //background-color: rgba($color: #A9AEAA, $alpha: 0.45);
+    height: 80vh;
+    
+    &__text{
+        color: white;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        font-size: 4rem;
+        margin-left: 15rem;
+        margin-bottom: 10rem;
+        transform: scaleX(-1);
+        
+        display:flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        p{
+            display: inline;
+        }
+    }
+
+    //background-color:#8F867D;
+    //background-image: url(../img/cool2.jpg);
+    background-image: linear-gradient(to right bottom, rgba(#0E376F,0.8), rgba(#0E376F,0.5)),url(../img/bike.jpg);
+    background-size: cover;
+    background-position: 30% 20%;
+    background-repeat: no-repeat;
+    transform: scaleX(-1);
+
+    //media query
+    @include respond(tab-land){
+        &__text{
+            margin-left: 2rem;
+            margin-bottom: 5rem;
+            p:first-child{
+                font-size: 3.5rem;
+            }
+        }
+    }
+    @include respond(tab-port){
+        &__text{
+            p:first-child{
+                font-size: 2.4rem;
+            }
+        }
+    }
+
+    
+
+}
+
+
+.bg-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .6;
+    overflow: hidden;
+
+    &__content{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
